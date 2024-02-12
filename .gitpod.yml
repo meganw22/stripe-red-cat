@@ -1,8 +1,11 @@
 image:
   file: .gitpod.dockerfile
 tasks:
-  - init: . ${GITPOD_REPO_ROOT}/.vscode/init_tasks.sh
-    command: /home/gitpod/.pg_ctl/bin/pg_start > /dev/null
+ - init: |
+      . ${GITPOD_REPO_ROOT}/.vscode/init_tasks.sh
+      /home/gitpod/.pg_ctl/bin/pg_start > /dev/null
+      pip3 install -r requirements.txt
+    command: . ${GITPOD_REPO_ROOT}/.vscode/uptime.sh &
   - command: . ${GITPOD_REPO_ROOT}/.vscode/uptime.sh &
 vscode:
   extensions:
