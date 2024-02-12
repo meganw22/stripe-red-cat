@@ -13,3 +13,8 @@ then:
 - type, >>> `from taskmanager import app, db`
 - type, >>> `app.app_context().push()`
 - type, >>> `db_create_all()`
+
+on a new server:
+   - `pip3 install flask`
+   - `pip install Flask-SQLAlchemy`
+   
