@@ -6,15 +6,20 @@ On the walkthrough tutorial, they are using codeanywhere, gitpod has additional 
 first:
 - run `set_pg` command
 - type `psql` to open the database table
-
+- create new `env.py` file
+- `CREATE DATABASE taskmanager;`
+- \q to exit 
 
 then:
 - run `python3`
 - type, >>> `from taskmanager import app, db`
 - type, >>> `app.app_context().push()`
-- type, >>> `db_create_all()`
+- type, >>> `db.create_all()`
+- type, `quit()`
+- reopen database, using set_pg and psql to view database.
 
-on a new server:
+ when restarting the file and connecting to a new server:
    - `pip3 install flask`
    - `pip install Flask-SQLAlchemy`
-   
+   - `pip install psycopg2`
+
